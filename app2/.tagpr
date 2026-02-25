@@ -1,0 +1,6 @@
+[tagpr]
+  releaseBranch = main
+  tagPrefix = app2
+  vPrefix = true
+  versionFile = -
+  changelogFile = app2/CHANGELOG.md
