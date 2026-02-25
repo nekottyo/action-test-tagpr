@@ -1,0 +1,6 @@
+[tagpr]
+  releaseBranch = main
+  tagPrefix = app3/hoge
+  vPrefix = true
+  versionFile = -
+  changelogFile = app3/hoge/CHANGELOG.md
