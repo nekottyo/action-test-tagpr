@@ -5,10 +5,27 @@ on:
       - main
 
 jobs:
+  list-changed-directories:
+    runs-on: ubuntu-latest
+
+    outputs:
+      changed-directories: ${{ steps.list-changed-directories.outputs.changed-directories }}
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: sankichi92/list-changed-directories@v1
+        id: list-changed-directories
+        with:
+          target-file: .tagpr
+
   tagpr:
     runs-on: ubuntu-latest
+    needs: list-changed-directories
+    stragety:
+      matrix:
+        workind-directory: ${{ fromJSON(needs.list-changed-directories.outputs.changed-directories) }}
     steps:
-
       - uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
         id: app-token
         with:
@@ -21,5 +38,7 @@ jobs:
           token: ${{ steps.app-token.outputs.token }}
 
       - uses: Songmu/tagpr@da82ed6743aec90049892070edd5561335904a9e # v1.17.0
+        with:
+          config: ${{ matrix.changed-directories }}/.tagpr
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
