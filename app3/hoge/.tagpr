@@ -4,3 +4,4 @@
   vPrefix = true
   versionFile = -
   changelogFile = app3/hoge/CHANGELOG.md
+  releaseYAMLPath = app3/hoge/release.yml

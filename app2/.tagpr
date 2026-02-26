@@ -4,3 +4,4 @@
   vPrefix = true
   versionFile = -
   changelogFile = app2/CHANGELOG.md
+  releaseYAMLPath = app2/release.yml
