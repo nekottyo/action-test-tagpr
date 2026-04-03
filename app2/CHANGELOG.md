@@ -1,5 +1,7 @@
 # Changelog
 
+## [v0.0.3](https://github.com/nekottyo/action-test-tagpr/compare/app2/v0.0.2...app2/v0.0.3) - 2026-04-03
+
 ## [v0.0.2](https://github.com/nekottyo/action-test-tagpr/compare/app2/v0.0.1...app2/v0.0.2) - 2026-02-26
 
 ## [v0.0.1](https://github.com/nekottyo/action-test-tagpr/compare/app1/v0.0.1...app2/v0.0.1) - 2026-02-25
